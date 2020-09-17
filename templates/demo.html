@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<form id="form" action="uploader" enctype="multipart/form-data" method="post">
+<input type="file" id="form-control" name="file" required>
+<button class="btn btn-primary">Detect</button>
+</form>
+ <a href="/videoframe"> <button class="btn btn-primary" >Open Web Cam</button></a>
+  <img src="">
+</div>
+
+{% if fileupload  %}
+
+        <div class="container">
+            <br>
+            <div class="row">
+                <div class="col-md-6" id="predict">
+                    <img src="{{ url_for('static',filename='images/')}}{{ img_name }}" width="540px" height="500px" alt="" >
+                </div>
+                <div class="col-md-6" id="predict">
+                    <img src="{{ url_for('static',filename='predict/')}}{{ img_name }}" width="540px" height="500px" alt="" >
+                </div>
+            </div>
+        </div>
+
+        <style>
+        #predict{
+            border: solid;
+            color:#002f4d;
+            text-align: center;
+        }
+        </style>
+
+
+    {% endif %}
+
+
+</body>
+</html>
+ {% endblock %}
