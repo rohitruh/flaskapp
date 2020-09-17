@@ -2,7 +2,7 @@ import os
 
 from flask import Flask, render_template, request, Response
 
-import cv2
+
 
 from wb import VideoCamera
 
